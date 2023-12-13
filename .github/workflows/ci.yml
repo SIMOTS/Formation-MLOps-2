@@ -28,7 +28,9 @@ jobs:
       # Add behave command
       - name: Run functional-test
         run: behave tests/test_functional/features
+  build:
+    steps:
       - name: qualite
         run: python -m pytest --cov=formation_indus_ds_avancee/ tests/test_unit/ -vv -p no:warnings
-        
+
 
