@@ -30,6 +30,6 @@ jobs:
       - name: Run tests
         run:  |
           pip install pytest
-          pyhton -m pytest tests/
+          make tests-unitaires
 
 
