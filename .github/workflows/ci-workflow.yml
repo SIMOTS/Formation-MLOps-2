@@ -22,11 +22,11 @@ jobs:
       - name: Run Linter
         run:  |
           pip install flake8
-          flake8 formation_indus_avancee/
+          flake8 formation_indus_ds_avancee/
       - name: Run Vulture
         run:  |
           pip install vulture
-          vulture formation_indus_avancee/
+          vulture formation_indus_ds_avancee/
       - name: Run tests
         run:  |
           pip install pytest
