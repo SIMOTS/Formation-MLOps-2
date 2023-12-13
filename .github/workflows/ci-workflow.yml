@@ -20,7 +20,9 @@ jobs:
       - name: Install dev dependencies
         run:  pip install -r requirements_test.txt
       - name: Run Linter
-        run:  py-actions/flake8@v2
+        run:  |
+          pip install flake8
+          flake8 scripts/
       - name: Run Vulture
         run:  "Trainee should add command to run vulture"
       - name: Run tests
