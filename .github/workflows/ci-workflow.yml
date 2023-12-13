@@ -26,7 +26,7 @@ jobs:
       - name: Run Vulture
         run:  |
           pip install vulture
-          vulture formation_indus_ds_avancee/
+          vulture formation_indus_ds_avancee/ --min-confidence 50
       - name: Run tests
         run:  |
           pip install pytest
