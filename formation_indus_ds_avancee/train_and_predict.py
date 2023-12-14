@@ -18,6 +18,8 @@ def train_model(features: pd.DataFrame, model_registry_folder: str) -> None:
     y = features[target]
     model = RandomForestRegressor(n_estimators=1, max_depth=10, n_jobs=1)
     model.fit(X, y)
+    time_str = time.strftime('%Y%m%d-%H%M%S')
+    joblib.dump(model, os.path.join(model_registry_folder, f'{time_str}.joblib'))
     joblib.dump(model, os.path.join(model_registry_folder, 'model.joblib'))
 
 
